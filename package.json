@@ -22,6 +22,7 @@
   "homepage": "https://github.com/mkit-5ain/Webpack#readme",
   "dependencies": {
     "jquery": "^3.6.0",
+    "live-server": "^1.2.1",
     "moment": "^2.29.1"
   },
   "devDependencies": {
