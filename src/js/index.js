@@ -1,5 +1,6 @@
 // index.js
 // import '../css/common.css';
+// import '../sass/_common.scss';
 import '../sass/pages.scss';
 const ele = document.querySelector('.main-moment');
 
