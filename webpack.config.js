@@ -36,13 +36,39 @@ module.exports = {
         rules: [
             //module.rules 를 사용해 여러개의 로더 지정이 가능.
             {
-                test: /\.scss$/, use: [MiniCssExtractPlugin.loader, 'css-loader', 'sass-loader'],
+                // test : 변환 할 파일을 지정
+                // 정규 표현식으로 문자열 .css 확장자로 끝나는 것을 찾음.
+                test: '/\.scss$/',///\.css$/,
+                // use : 해당 파일에 적용할 로더의 이름
+                // 로더에서 모듈 로딩 순서는 배열의 요소 오른쪽에서 왼쪽으로 로딩하며 진행
+                use: [
+                    {
+                        loader: MiniCssExtractPlugin.loader,
+                        options: {
+                            publicPath: '../'
+                        }
+                    },
+
+                    // sass-loader : 기본적으로 node-sass 를 사용하여 sass 를 css 로 컴파일하는 역할
+                    'css-loader',
+
+                    {
+                        loader: 'sass-loader',
+                        options: {
+                            outputStyle: 'expanded',
+                            indentType: 'tab', // 정의되어 있지 않으면 기본값은 space
+                            indentWidth: 1 // 기본값 2
+                        }
+                    }
+                ],
+                // exclude 는 제외할 폴더나 파일
+                // 다른 모듈을 사용해서 컴파일하지 않도록 지정(안전성 확보)
                 exclude: /node_modules/
             }
         ]
     },
     plugins: [
-        new webpack.HotModuleReplacementPlugin(),
+
         new HtmlWebpackPlugin({
             template: 'index.html',
             filename: 'index.html',

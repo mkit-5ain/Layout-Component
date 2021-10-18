@@ -5,10 +5,9 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "webpack-dev-server --open",
     "dev": "webpack --config webpack.dev.js",
-    "build": "webpack --config webpack.prod.js",
-    "watch": "webpack --watch",
-    "start": "webpack-dev-server --hot --progress --colors --inline"
+    "build": "webpack --config webpack.prod.js"
   },
   "repository": {
     "type": "git",
@@ -23,7 +22,6 @@
   "homepage": "https://github.com/mkit-5ain/Webpack#readme",
   "dependencies": {
     "jquery": "^3.6.0",
-    "live-server": "^1.2.1",
     "moment": "^2.29.1"
   },
   "devDependencies": {
@@ -31,8 +29,8 @@
     "html-webpack-plugin": "^5.3.2",
     "mini-css-extract-plugin": "^2.3.0",
     "node-sass": "^6.0.1",
-    "sass": "^1.43.2",
-    "sass-loader": "^12.2.0",
+    "sass": "^1.42.1",
+    "sass-loader": "^12.1.0",
     "style-loader": "^3.3.0",
     "webpack": "^5.55.1",
     "webpack-cli": "^4.8.0",

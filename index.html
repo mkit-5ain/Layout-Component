@@ -5,12 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
-    <!-- <link rel="stylesheet" href="dist/css/style.css"> -->
-    <link rel="stylesheet" href="src/sass/pages.scss">
+    <link rel="stylesheet" href="dist/css/style.css">
 </head>
 <body>
     <!-- <%= require("fs").readFileSync(htmlWebpackPlugin.options.HTML_PATH + "/header.html") %> -->
-    <header>345</header>
+    <header>헤더</header>
     <div>
         <p>사실 웹팩 설정은 복잡하기로 악명 높지만 다양한 업무를 처리해 줄 수 있는 장점과 계속해서 빠르고 쉽게(?) 개선되고 있습니다</p>
     </div>
@@ -21,7 +20,7 @@
         <p class="main-moment"> not yet Moment loaded </p>
         <br>
         <label>
-            <strong>jQuery : module1.js</strong>
+            <strong>jQuery : module1.js</strong> 
         </label>
         <p class="jQ">jQuery 사용전</p>
         <br>
@@ -36,6 +35,6 @@
         <p class="module02">module2 사용</p>
     </div>
     <%= require("fs").readFileSync(htmlWebpackPlugin.options.HTML_PATH + "/footer.html") %>
-    <script src="dist/js/index.js"></script>
+    <script src="dist/index.js"></script>
 </body>
 </html>
